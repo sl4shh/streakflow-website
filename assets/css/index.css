@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "JosefinSansBold";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/JosefinSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "JosefinSansRegular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/JosefinSans-Regular.ttf") format("truetype");
+}
+
+* {
+  font-family: "JosefinSansRegular";
+  scroll-behavior: smooth !important;
+}
+
+::selection {
+  background-color: #019091;
+  color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2eff00;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d8ffaf;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section#home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-image: url(../img/section1bg.svg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+section .title {
+  font-size: 64px;
+  font-family: "JosefinSansBold";
+}
+
+.downloadButton {
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #d9ffe2;
+  padding: 10px;
+  text-decoration: none;
+  color: darkgreen;
+  font-family: "JosefinSansBold";
+  border-radius: 50px;
+  user-select: none;
+}
+
+.downloadButton img {
+  height: 100%;
+}
+
+.nextSection {
+  text-decoration: none;
+  color: rgb(0, 183, 255);
+  border: 5px rgba(0, 183, 255, 0.415) solid;
+  border-radius: 50px;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.check {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 25vw;
+  max-height: 25vh;
+  animation: moveAndFadeFromBotToTop 5s ease infinite;
+}
+
+@keyframes moveAndFadeFromBotToTop {
+  0% {
+    top: 75vh;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+section#screenshots {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-image: url(../img/section2bg.svg);
+  background-size: cover;
+  background-position: top;
+  color: white;
+}
+
+.screenshotContainer {
+  display: flex;
+  gap: 10px;
+  height: 70vh;
+  overflow-x: scroll;
+  max-width: 100%;
+  gap: 25px;
+}
+
+.screenshotContainer img {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+section#download {
+  height: 80vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-image: url(../img/section3bg.svg);
+  background-size: cover;
+  background-position: top;
+  padding-bottom: 20vh;
+}
